@@ -1,0 +1,23 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by Jack.Ma on 16/3/31.
+//  Copyright © 2016年 Jack.Ma. All rights reserved.
+//
+
+#ifndef BuDeJie_pch
+#define BuDeJie_pch
+
+    #ifdef DEBUG
+        #define NSLog(...) NSLog(__VA_ARGS__)
+        #define debugMethod() NSLog(@"%s", __func__)
+    #else
+        #define NSLog(...)
+        #define debugMethod()
+    #endif
+
+#import "UIImage+Render.h"
+#import "UIColor+Hex.h"
+
+#endif /* BuDeJie_pch */
