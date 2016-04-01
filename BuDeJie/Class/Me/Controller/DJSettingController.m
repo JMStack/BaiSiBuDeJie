@@ -1,55 +1,27 @@
 //
-//  DJMeController.m
+//  DJSettingController.m
 //  BuDeJie
 //
-//  Created by Jack.Ma on 16/3/31.
+//  Created by Jack.Ma on 16/4/1.
 //  Copyright © 2016年 Jack.Ma. All rights reserved.
 //
 
-#import "DJMeController.h"
 #import "DJSettingController.h"
 
-@interface DJMeController ()
+@interface DJSettingController ()
 
 @end
 
-@implementation DJMeController
+@implementation DJSettingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
-    [self setUpNavigatoinBar];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)setUpNavigatoinBar {
-    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
-    [settingButton setImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
-    [settingButton addTarget:self action:@selector(settinButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [settingButton sizeToFit];
-    UIBarButtonItem *settingBarItem = [[UIBarButtonItem alloc] initWithCustomView:settingButton];
-    
-    UIButton *nightModeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [nightModeButton setImage:[UIImage imageNamed:@"mine-moon-icon"] forState:UIControlStateNormal];
-    [nightModeButton setImage:[UIImage imageNamed:@"mine-moon-icon-click"] forState:UIControlStateSelected];
-    [nightModeButton addTarget:self action:@selector(nightModeButton:) forControlEvents:UIControlEventTouchUpInside];
-    [nightModeButton sizeToFit];
-    UIBarButtonItem *nightModeItem = [[UIBarButtonItem alloc] initWithCustomView:nightModeButton];
-    
-    self.navigationItem.rightBarButtonItems = @[settingBarItem,nightModeItem];
-}
-- (void)nightModeButton:(UIButton *)button {
-    button.selected = !button.selected;
-}
-- (void)settinButtonTapped:(UIButton *)button{
-    DJSettingController *viewController = [[DJSettingController alloc] init];
-    
-    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    application.statusBarStyle = UIStatusBarStyleLightContent;
+    application.statusBarHidden = NO;
+    application.statusBarStyle = UIStatusBarStyleDefault;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     

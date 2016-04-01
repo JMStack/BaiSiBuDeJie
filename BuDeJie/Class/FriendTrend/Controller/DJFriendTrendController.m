@@ -17,8 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"我的关注";
+    [self setUpNavigationBar];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)setUpNavigationBar {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(friendSRecomment:) forControlEvents:UIControlEventTouchUpInside];
+    [button sizeToFit];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+- (void)friendSRecomment:(UIButton *)button {
+    debugMethod();
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

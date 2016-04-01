@@ -20,6 +20,7 @@
 		EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1E01CAD3AE5009681AF /* DJNewController.m */; };
 		EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1E31CAD3D13009681AF /* DJFriendTrendController.m */; };
 		EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCED81CAE1BD300490121 /* DJTabBar.m */; };
+		EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCEDB1CAE691100490121 /* DJSettingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		EDBEF1E31CAD3D13009681AF /* DJFriendTrendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJFriendTrendController.m; sourceTree = "<group>"; };
 		EDECCED71CAE1BD300490121 /* DJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTabBar.h; sourceTree = "<group>"; };
 		EDECCED81CAE1BD300490121 /* DJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBar.m; sourceTree = "<group>"; };
+		EDECCEDA1CAE691100490121 /* DJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSettingController.h; sourceTree = "<group>"; };
+		EDECCEDB1CAE691100490121 /* DJSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSettingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				EDBEF1A91CAD3159009681AF /* Essence */,
-				EDBEF1AD1CAD3159009681AF /* FriendTrend */,
-				EDBEF1BF1CAD3159009681AF /* Publish */,
-				EDBEF1B11CAD3159009681AF /* MainFrame */,
-				EDBEF1B51CAD3159009681AF /* Me */,
 				EDBEF1B61CAD3159009681AF /* New */,
+				EDBEF1BF1CAD3159009681AF /* Publish */,
+				EDBEF1AD1CAD3159009681AF /* FriendTrend */,
+				EDBEF1B51CAD3159009681AF /* Me */,
+				EDBEF1B11CAD3159009681AF /* MainFrame */,
 				EDBEF1BA1CAD3159009681AF /* Other */,
 			);
 			path = Class;
@@ -262,8 +265,8 @@
 				ED142F341CAD4135006566DF /* UIColor+Hex.h */,
 				ED142F351CAD4135006566DF /* UIColor+Hex.m */,
 				EDBEF1BB1CAD3159009681AF /* AppDelegate.h */,
-				EDBEF1CF1CAD3736009681AF /* BuDeJie.pch */,
 				EDBEF1BC1CAD3159009681AF /* AppDelegate.m */,
+				EDBEF1CF1CAD3736009681AF /* BuDeJie.pch */,
 				EDBEF1BD1CAD3159009681AF /* Info.plist */,
 				EDBEF1BE1CAD3159009681AF /* main.m */,
 				EDBEF1CC1CAD36A3009681AF /* UIImage+Render.h */,
@@ -310,6 +313,8 @@
 			children = (
 				EDBEF1DC1CAD3AA5009681AF /* DJMeController.h */,
 				EDBEF1DD1CAD3AA5009681AF /* DJMeController.m */,
+				EDECCEDA1CAE691100490121 /* DJSettingController.h */,
+				EDECCEDB1CAE691100490121 /* DJSettingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 			files = (
 				EDBEF1C81CAD32A7009681AF /* DJTabBarController.m in Sources */,
 				EDBEF1D51CAD39D6009681AF /* DJEssenceController.m in Sources */,
+				EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */,
 				EDBEF1C31CAD3159009681AF /* AppDelegate.m in Sources */,
 				EDBEF1CE1CAD36A3009681AF /* UIImage+Render.m in Sources */,
 				EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */,
