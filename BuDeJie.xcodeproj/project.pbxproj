@@ -19,6 +19,7 @@
 		EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1DD1CAD3AA5009681AF /* DJMeController.m */; };
 		EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1E01CAD3AE5009681AF /* DJNewController.m */; };
 		EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1E31CAD3D13009681AF /* DJFriendTrendController.m */; };
+		EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCED81CAE1BD300490121 /* DJTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		EDBEF1E01CAD3AE5009681AF /* DJNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJNewController.m; sourceTree = "<group>"; };
 		EDBEF1E21CAD3D13009681AF /* DJFriendTrendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJFriendTrendController.h; sourceTree = "<group>"; };
 		EDBEF1E31CAD3D13009681AF /* DJFriendTrendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJFriendTrendController.m; sourceTree = "<group>"; };
+		EDECCED71CAE1BD300490121 /* DJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTabBar.h; sourceTree = "<group>"; };
+		EDECCED81CAE1BD300490121 /* DJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 		EDBEF1B41CAD3159009681AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDECCED71CAE1BD300490121 /* DJTabBar.h */,
+				EDECCED81CAE1BD300490121 /* DJTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */,
 				EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */,
 				EDBEF1D21CAD3934009681AF /* DJPublishController.m in Sources */,
+				EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

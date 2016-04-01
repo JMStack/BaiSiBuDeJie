@@ -13,6 +13,7 @@
 #import "DJMeController.h"
 #import "DJNewController.h"
 #import "DJFriendTrendController.h"
+#import "DJTabBar.h"
 
 @interface DJTabBarController ()
 
@@ -20,13 +21,25 @@
 
 @implementation DJTabBarController
 
++ (void)load {
+    //设置item选中时的体字颜色
+    [self setUpItemTitleColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //重新设置自定义tabbar
+    DJTabBar *tabbar = [[DJTabBar alloc] init];
+    [tabbar addTarget:self action:@selector(publishTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self setValue:tabbar forKeyPath:@"tabBar"];
     //设置所有的子控制器
     [self addAllOfChildViewController];
-    //设置item选中时的体字颜色
-//    [self setUpItemTitleColor];
+
+}
+
+- (void)publishTapped:(UIButton *)button {
+    debugMethod();
 }
 
 - (void)addAllOfChildViewController {
@@ -37,7 +50,7 @@
     [self addOneChileRootViewController:[DJFriendTrendController class] title:@"朋友" withItemImageNaem:@"tabBar_friendTrends_icon" selectItemImage:@"tabBar_friendTrends_click_icon"];
     
     //添加发布页
-    [self addOneChileRootViewController:[DJPublishController class] title:nil withItemImageNaem:@"tabBar_publish_icon" selectItemImage:@"tabBar_publish_click_icon"];
+//    [self addOneChileRootViewController:[DJPublishController class] title:nil withItemImageNaem:@"tabBar_publish_icon" selectItemImage:@"tabBar_publish_click_icon"];
     
     //添加动态页
     [self addOneChileRootViewController:[DJNewController class] title:@"动态" withItemImageNaem:@"tabBar_new_icon" selectItemImage:@"tabBar_new_click_icon"];
@@ -64,16 +77,12 @@
     }
 }
 
-- (void)setUpItemTitleColor {
++ (void)setUpItemTitleColor {
     UITabBarItem *tabbarItem = [UITabBarItem appearance];
-    //正常情况下字体
-    NSDictionary *attributesNormal = @{NSForegroundColorAttributeName : [UIColor colorWithHexString:@""]
-                                };
-    [tabbarItem setTitleTextAttributes:attributesNormal forState:UIControlStateNormal];
-    
     //选中情况下字体
-    NSDictionary *attributesSelect = @{NSForegroundColorAttributeName : [UIColor colorWithHexString:@""]
-                                 };
+    NSDictionary *attributesSelect = @{NSForegroundColorAttributeName : [UIColor blackColor],
+                                       NSFontAttributeName            : [UIFont systemFontOfSize:13]
+                                       };
     [tabbarItem setTitleTextAttributes:attributesSelect forState:UIControlStateNormal];
 }
 
@@ -83,14 +92,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
