@@ -20,4 +20,17 @@
 #import "UIImage+Render.h"
 #import "UIColor+Hex.h"
 
+//#define iPhone6P (ScreenH == 736)
+//#define iPhone6 (ScreenH == 667)
+//#define iPhone5 (ScreenH == 568)
+//#define iPhone4 (ScreenH == 480)
+
+#define iPhone6P (736)
+#define iPhone6 (667)
+#define iPhone5 (568)
+#define iPhone4 (480)
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
 #endif /* BuDeJie_pch */

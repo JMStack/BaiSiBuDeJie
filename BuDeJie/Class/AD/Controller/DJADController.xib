@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DJADController">
+            <connections>
+                <outlet property="adView" destination="r5D-Hz-aFi" id="062-wl-XBM"/>
+                <outlet property="jumpButton" destination="msX-29-krp" id="cXS-Eq-M4J"/>
+                <outlet property="launchImage" destination="axs-L3-2Fm" id="xsH-c9-ZIb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axs-L3-2Fm">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5D-Hz-aFi">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msX-29-krp">
+                    <rect key="frame" x="536" y="10" width="54" height="30"/>
+                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <state key="normal" title="跳过 (3)">
+                        <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToTabBarController:" destination="-1" eventType="touchUpInside" id="voO-cU-wws"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="msX-29-krp" secondAttribute="trailing" constant="10" id="4tG-ly-VrD"/>
+                <constraint firstAttribute="bottom" secondItem="r5D-Hz-aFi" secondAttribute="bottom" id="DHQ-go-hVy"/>
+                <constraint firstAttribute="bottom" secondItem="axs-L3-2Fm" secondAttribute="bottom" id="E5J-Q0-Coz"/>
+                <constraint firstAttribute="trailing" secondItem="axs-L3-2Fm" secondAttribute="trailing" id="ELF-fP-SuM"/>
+                <constraint firstItem="axs-L3-2Fm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NnS-xs-e6N"/>
+                <constraint firstItem="r5D-Hz-aFi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y6c-1b-mIP"/>
+                <constraint firstItem="r5D-Hz-aFi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nWl-sL-TXz"/>
+                <constraint firstItem="msX-29-krp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="qX7-tI-TCn"/>
+                <constraint firstItem="axs-L3-2Fm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="siQ-ck-6jM"/>
+                <constraint firstAttribute="trailing" secondItem="r5D-Hz-aFi" secondAttribute="trailing" id="v2T-gY-nps"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>
