@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *jumpButton;
 @property (weak, nonatomic) UIImageView *imageView;
 @property (weak, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) DJADItem *item;
 @end
 
 @implementation DJADController
@@ -31,10 +32,21 @@
         UIImageView *imageView = [[UIImageView alloc] init];
         [self.adView addSubview:imageView];
         _imageView = imageView;
+        imageView.userInteractionEnabled = YES;
+        //添加广告页手势,用以跳转
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(adImageTapped)];
+        [imageView addGestureRecognizer:gesture];
     }
     return _imageView;
 }
 
+- (void)adImageTapped {
+    UIApplication *application = [UIApplication sharedApplication];
+    if ([application canOpenURL:[NSURL URLWithString:self.item.ori_curl ]]) {
+        [application openURL:[NSURL URLWithString:self.item.ori_curl ]];
+    }
+    [self jumpToTabBarController:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,7 +61,7 @@
 }
 - (void)adTimerOut {
     static NSInteger time = 3;
-    NSString *string = [NSString stringWithFormat:@"跳过 (%zd)",time--];
+    NSString *string = [NSString stringWithFormat:@"跳过 %zd",time--];
     [self.jumpButton setTitle:string forState:UIControlStateNormal];
     if (time < 0) {
         [self.timer invalidate];
@@ -76,6 +88,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *ad = [responseObject[@"ad"] firstObject];
         DJADItem *item = [DJADItem mj_objectWithKeyValues:ad];
+        _item = item;
         //下载广告图片
         if (item.w <= 0) {
             return ;
@@ -83,7 +96,7 @@
         CGFloat w = ScreenW;
         CGFloat h = ScreenW / item.w * item.h;
         self.imageView.frame = CGRectMake(0, 0, w, h);
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:item.w_picurl] placeholderImage:self.launchImage.image];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:item.w_picurl] ];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
