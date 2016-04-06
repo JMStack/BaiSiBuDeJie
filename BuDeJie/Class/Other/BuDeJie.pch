@@ -19,6 +19,7 @@
 
 #import "UIImage+Render.h"
 #import "UIColor+Hex.h"
+#import "UIImage+Circle.h"
 
 //#define iPhone6P (ScreenH == 736)
 //#define iPhone6 (ScreenH == 667)

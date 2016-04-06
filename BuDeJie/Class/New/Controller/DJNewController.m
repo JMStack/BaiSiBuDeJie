@@ -7,6 +7,7 @@
 //
 
 #import "DJNewController.h"
+#import "DJSubscribeController.h"
 
 @interface DJNewController ()
 
@@ -17,6 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self setUpNavigationSubscribeItem];
+}
+
+- (void)setUpNavigationSubscribeItem {
+    // left item
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"MainTagSubIcon"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"MainTagSubIconClick"] forState:UIControlStateHighlighted];
+    [button addTarget:self action:@selector(subscribeTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [button sizeToFit];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    //title view
+    UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.titleView = view;
+}
+
+- (void)subscribeTapped:(UIButton *)button {
+    DJSubscribeController *subscribeController = [[DJSubscribeController alloc ] init];
+    [self.navigationController pushViewController:subscribeController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6087DE542C2EF4D9EE747505 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910363385E2C2C46267FB278 /* libPods.a */; };
 		ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = ED142F351CAD4135006566DF /* UIColor+Hex.m */; };
+		ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */; };
 		ED3F134F1CAD2F65000E36A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED3F134E1CAD2F65000E36A5 /* Assets.xcassets */; };
 		EDBEF1C31CAD3159009681AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1BC1CAD3159009681AF /* AppDelegate.m */; };
 		EDBEF1C51CAD3159009681AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1BE1CAD3159009681AF /* main.m */; };
@@ -30,6 +31,10 @@
 		EDD13BFF1CB3EA3500C8EDA3 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD13BF81CB3EA3500C8EDA3 /* LaunchImage.png */; };
 		EDD13C001CB3EA3500C8EDA3 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD13BF91CB3EA3500C8EDA3 /* LaunchImage@2x.png */; };
 		EDD13C031CB3F0E900C8EDA3 /* DJADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C021CB3F0E900C8EDA3 /* DJADItem.m */; };
+		EDD13C061CB4008D00C8EDA3 /* DJSubscribeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C051CB4008D00C8EDA3 /* DJSubscribeController.m */; };
+		EDD13C091CB4067D00C8EDA3 /* DJSubRowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C081CB4067D00C8EDA3 /* DJSubRowItem.m */; };
+		EDD13C0D1CB409A000C8EDA3 /* DJSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C0B1CB409A000C8EDA3 /* DJSubscribeCell.m */; };
+		EDD13C0E1CB409A000C8EDA3 /* DJSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */; };
 		EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCED81CAE1BD300490121 /* DJTabBar.m */; };
 		EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCEDB1CAE691100490121 /* DJSettingController.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +45,8 @@
 		910363385E2C2C46267FB278 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED142F341CAD4135006566DF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		ED142F351CAD4135006566DF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
+		ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
 		ED3F133F1CAD2F64000E36A5 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3F134E1CAD2F65000E36A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDBEF1BB1CAD3159009681AF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +82,13 @@
 		EDD13BF91CB3EA3500C8EDA3 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		EDD13C011CB3F0E900C8EDA3 /* DJADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJADItem.h; sourceTree = "<group>"; };
 		EDD13C021CB3F0E900C8EDA3 /* DJADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJADItem.m; sourceTree = "<group>"; };
+		EDD13C041CB4008D00C8EDA3 /* DJSubscribeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSubscribeController.h; sourceTree = "<group>"; };
+		EDD13C051CB4008D00C8EDA3 /* DJSubscribeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSubscribeController.m; sourceTree = "<group>"; };
+		EDD13C071CB4067D00C8EDA3 /* DJSubRowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSubRowItem.h; sourceTree = "<group>"; };
+		EDD13C081CB4067D00C8EDA3 /* DJSubRowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSubRowItem.m; sourceTree = "<group>"; };
+		EDD13C0A1CB409A000C8EDA3 /* DJSubscribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSubscribeCell.h; sourceTree = "<group>"; };
+		EDD13C0B1CB409A000C8EDA3 /* DJSubscribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSubscribeCell.m; sourceTree = "<group>"; };
+		EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJSubscribeCell.xib; sourceTree = "<group>"; };
 		EDECCED71CAE1BD300490121 /* DJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTabBar.h; sourceTree = "<group>"; };
 		EDECCED81CAE1BD300490121 /* DJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBar.m; sourceTree = "<group>"; };
 		EDECCEDA1CAE691100490121 /* DJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSettingController.h; sourceTree = "<group>"; };
@@ -289,6 +303,8 @@
 			children = (
 				EDBEF1DF1CAD3AE5009681AF /* DJNewController.h */,
 				EDBEF1E01CAD3AE5009681AF /* DJNewController.m */,
+				EDD13C041CB4008D00C8EDA3 /* DJSubscribeController.h */,
+				EDD13C051CB4008D00C8EDA3 /* DJSubscribeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +312,8 @@
 		EDBEF1B81CAD3159009681AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDD13C071CB4067D00C8EDA3 /* DJSubRowItem.h */,
+				EDD13C081CB4067D00C8EDA3 /* DJSubRowItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +321,9 @@
 		EDBEF1B91CAD3159009681AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDD13C0A1CB409A000C8EDA3 /* DJSubscribeCell.h */,
+				EDD13C0B1CB409A000C8EDA3 /* DJSubscribeCell.m */,
+				EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +340,8 @@
 				EDBEF1BE1CAD3159009681AF /* main.m */,
 				EDBEF1CC1CAD36A3009681AF /* UIImage+Render.h */,
 				EDBEF1CD1CAD36A3009681AF /* UIImage+Render.m */,
+				ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */,
+				ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -501,6 +524,7 @@
 				EDD13BFC1CB3EA3500C8EDA3 /* LaunchImage-700@2x.png in Resources */,
 				EDD13BFB1CB3EA3500C8EDA3 /* LaunchImage-700-568h@2x.png in Resources */,
 				ED3F134F1CAD2F65000E36A5 /* Assets.xcassets in Resources */,
+				EDD13C0E1CB409A000C8EDA3 /* DJSubscribeCell.xib in Resources */,
 				EDD13BFE1CB3EA3500C8EDA3 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,13 +590,17 @@
 				EDBEF1C31CAD3159009681AF /* AppDelegate.m in Sources */,
 				EDD13BF01CB3E33600C8EDA3 /* DJADController.m in Sources */,
 				EDBEF1CE1CAD36A3009681AF /* UIImage+Render.m in Sources */,
+				EDD13C061CB4008D00C8EDA3 /* DJSubscribeController.m in Sources */,
 				EDD13C031CB3F0E900C8EDA3 /* DJADItem.m in Sources */,
 				EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */,
 				EDBEF1CB1CAD32F9009681AF /* DJNavigationController.m in Sources */,
 				EDBEF1C51CAD3159009681AF /* main.m in Sources */,
 				EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */,
+				EDD13C0D1CB409A000C8EDA3 /* DJSubscribeCell.m in Sources */,
 				ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */,
 				EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */,
+				ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */,
+				EDD13C091CB4067D00C8EDA3 /* DJSubRowItem.m in Sources */,
 				EDBEF1D21CAD3934009681AF /* DJPublishController.m in Sources */,
 				EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */,
 			);
