@@ -27,6 +27,10 @@ static NSString * const  cellID = @"SUBCELL";
     [self loadData];
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"DJSubscribeCell" bundle:nil] forCellReuseIdentifier:cellID];
+    //不要cell分隔线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //tableview背景色
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#D7D7D7"];
 }
 
 - (void)loadData {

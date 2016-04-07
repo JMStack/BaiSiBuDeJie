@@ -34,6 +34,7 @@
     _item = item;
     
     self.titleText.text = item.theme_name;
+    
     if (item.sub_number > 10000) {
         NSInteger subNumber = item.sub_number / 10000;
         NSString *text = [NSString stringWithFormat:@"%zd万人定阅",subNumber];
@@ -51,7 +52,11 @@
     }];
 }
 
-
+- (void)setFrame:(CGRect)frame {
+    frame.size.height -= 1;
+    
+    [super setFrame:frame];
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
