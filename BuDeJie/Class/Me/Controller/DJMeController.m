@@ -8,22 +8,60 @@
 
 #import "DJMeController.h"
 #import "DJSettingController.h"
+#import "DJMeSquareCell.h"
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import "DJSquareItem.h"
+#import "DJWebKitController.h"
 
-@interface DJMeController ()
-
+@interface DJMeController () <UICollectionViewDataSource,UICollectionViewDelegate>
+@property (strong, nonatomic) NSMutableArray <DJSquareItem *> *collectionArray;
+@property (weak, nonatomic) UICollectionView *footerView;
 @end
+
+#define Column 4
+#define ItemWH (ScreenW-(Column-1))/Column
 
 @implementation DJMeController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
+    self.navigationItem.title = @"我的";
     [self setUpNavigatoinBar];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.sectionHeaderHeight = 0.001;
+    self.tableView.sectionFooterHeight = 10;
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
+    [self loadData];
+    [self setUpTableViewFooterView];
+}
+
+#define RowCount ((array.count-1)/Column+1)
+
+- (void)loadData {
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    NSDictionary *parameter = @{@"a" : @"square",
+                                @"c"  : @"topic"
+                               };
+    [session GET:@"http://api.budejie.com/api/api_open.php" parameters:parameter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray *array = responseObject[@"square_list"];
+        _collectionArray = [DJSquareItem mj_objectArrayWithKeyValuesArray:array];
+        NSInteger count = Column - array.count % Column;
+        while (count--) {
+            [_collectionArray addObject:[[DJSquareItem alloc] init]];
+        }
+        CGFloat height = RowCount * ItemWH + RowCount - 1;
+        CGRect rect = CGRectMake(0, 0, ScreenW, height);
+        self.footerView.frame = rect;
+        self.tableView.tableFooterView = self.footerView;
+        [self.footerView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)setUpNavigatoinBar {
@@ -52,75 +90,56 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+
+static NSString * const collectionCell = @"collectionCellID";
+
+- (void)setUpTableViewFooterView {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.minimumLineSpacing = 1;
+    layout.minimumInteritemSpacing = 1;
+    layout.itemSize = CGSizeMake(ItemWH,ItemWH);
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    collectionView.backgroundColor = [UIColor colorWithHexString:@"#D7D7D7"];
+    [collectionView registerNib:[UINib nibWithNibName:@"DJMeSquareCell" bundle:nil] forCellWithReuseIdentifier:collectionCell];
+    self.tableView.tableFooterView = collectionView;
+    
+    self.footerView = collectionView;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.collectionArray.count;
+}
+
+- (DJMeSquareCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DJMeSquareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionCell forIndexPath:indexPath];
+    
+    cell.item = self.collectionArray[indexPath.item];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DJSquareItem *item = self.collectionArray[indexPath.item];
+    if ([item.url containsString:@"mod:"]) {
+        UIViewController *viewController = [[UIViewController alloc] init];
+        viewController.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:viewController animated:YES];
+    } else {
+        DJWebKitController *webKitController = [[DJWebKitController alloc] init];
+        webKitController.url = item.url;
+        [self.navigationController pushViewController:webKitController animated:YES];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -41,6 +41,8 @@
         backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
         UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
         viewController.navigationItem.leftBarButtonItem = buttonItem;
+        
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController: viewController animated:animated];
 }

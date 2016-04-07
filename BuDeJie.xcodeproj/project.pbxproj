@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6087DE542C2EF4D9EE747505 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910363385E2C2C46267FB278 /* libPods.a */; };
+		ED0972291CB608E700FF5D19 /* DJMeSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0972271CB608E700FF5D19 /* DJMeSquareCell.m */; };
+		ED09722A1CB608E700FF5D19 /* DJMeSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0972281CB608E700FF5D19 /* DJMeSquareCell.xib */; };
+		ED09722D1CB60F0100FF5D19 /* DJSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ED09722C1CB60F0100FF5D19 /* DJSquareItem.m */; };
+		ED09722F1CB6357500FF5D19 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED09722E1CB6357500FF5D19 /* WebKit.framework */; };
+		ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0972341CB6364A00FF5D19 /* DJWebKitController.m */; };
+		ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */; };
 		ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = ED142F351CAD4135006566DF /* UIColor+Hex.m */; };
 		ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */; };
 		ED1C19AC1CB4A81400483F73 /* DJFriendTrendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */; };
@@ -43,6 +49,7 @@
 		EDD13C0E1CB409A000C8EDA3 /* DJSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */; };
 		EDDBEBC11CB5F17E00328651 /* DJLoginRegisterField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBEBC01CB5F17E00328651 /* DJLoginRegisterField.m */; };
 		EDDBEBC41CB5F7A900328651 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBEBC31CB5F7A900328651 /* UITextField+PlaceholderColor.m */; };
+		EDDBEBC61CB5FC4400328651 /* DJMeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBEBC51CB5FC4400328651 /* DJMeController.storyboard */; };
 		EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCED81CAE1BD300490121 /* DJTabBar.m */; };
 		EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCEDB1CAE691100490121 /* DJSettingController.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +58,15 @@
 		2EFB194644F16A53A905B6A1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7698E6805368F2FA14421242 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		910363385E2C2C46267FB278 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0972261CB608E700FF5D19 /* DJMeSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJMeSquareCell.h; sourceTree = "<group>"; };
+		ED0972271CB608E700FF5D19 /* DJMeSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJMeSquareCell.m; sourceTree = "<group>"; };
+		ED0972281CB608E700FF5D19 /* DJMeSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJMeSquareCell.xib; sourceTree = "<group>"; };
+		ED09722B1CB60F0100FF5D19 /* DJSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSquareItem.h; sourceTree = "<group>"; };
+		ED09722C1CB60F0100FF5D19 /* DJSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSquareItem.m; sourceTree = "<group>"; };
+		ED09722E1CB6357500FF5D19 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		ED0972331CB6364A00FF5D19 /* DJWebKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJWebKitController.h; sourceTree = "<group>"; };
+		ED0972341CB6364A00FF5D19 /* DJWebKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJWebKitController.m; sourceTree = "<group>"; };
+		ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJWebKitController.xib; sourceTree = "<group>"; };
 		ED142F341CAD4135006566DF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		ED142F351CAD4135006566DF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
@@ -110,6 +126,7 @@
 		EDDBEBC01CB5F17E00328651 /* DJLoginRegisterField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJLoginRegisterField.m; sourceTree = "<group>"; };
 		EDDBEBC21CB5F7A900328651 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
 		EDDBEBC31CB5F7A900328651 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
+		EDDBEBC51CB5FC4400328651 /* DJMeController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DJMeController.storyboard; sourceTree = "<group>"; };
 		EDECCED71CAE1BD300490121 /* DJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTabBar.h; sourceTree = "<group>"; };
 		EDECCED81CAE1BD300490121 /* DJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBar.m; sourceTree = "<group>"; };
 		EDECCEDA1CAE691100490121 /* DJSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSettingController.h; sourceTree = "<group>"; };
@@ -121,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED09722F1CB6357500FF5D19 /* WebKit.framework in Frameworks */,
 				6087DE542C2EF4D9EE747505 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +149,7 @@
 		39A9F3E65D70B5654F5903CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED09722E1CB6357500FF5D19 /* WebKit.framework */,
 				910363385E2C2C46267FB278 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -418,8 +437,12 @@
 			children = (
 				EDBEF1DC1CAD3AA5009681AF /* DJMeController.h */,
 				EDBEF1DD1CAD3AA5009681AF /* DJMeController.m */,
+				EDDBEBC51CB5FC4400328651 /* DJMeController.storyboard */,
 				EDECCEDA1CAE691100490121 /* DJSettingController.h */,
 				EDECCEDB1CAE691100490121 /* DJSettingController.m */,
+				ED0972331CB6364A00FF5D19 /* DJWebKitController.h */,
+				ED0972341CB6364A00FF5D19 /* DJWebKitController.m */,
+				ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +450,8 @@
 		EDBEF1DA1CAD3A74009681AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED09722B1CB60F0100FF5D19 /* DJSquareItem.h */,
+				ED09722C1CB60F0100FF5D19 /* DJSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,6 +459,9 @@
 		EDBEF1DB1CAD3A74009681AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED0972261CB608E700FF5D19 /* DJMeSquareCell.h */,
+				ED0972271CB608E700FF5D19 /* DJMeSquareCell.m */,
+				ED0972281CB608E700FF5D19 /* DJMeSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -555,6 +583,7 @@
 				ED1C19AC1CB4A81400483F73 /* DJFriendTrendController.xib in Resources */,
 				EDD13BF11CB3E33600C8EDA3 /* DJADController.xib in Resources */,
 				ED2C80451CB4E6530052E1AD /* DJLoginAndRegisterController.xib in Resources */,
+				ED09722A1CB608E700FF5D19 /* DJMeSquareCell.xib in Resources */,
 				EDD13BFD1CB3EA3500C8EDA3 /* LaunchImage-800-667h@2x.png in Resources */,
 				EDD13BFA1CB3EA3500C8EDA3 /* LaunchImage-568h@2x.png in Resources */,
 				EDD13BFC1CB3EA3500C8EDA3 /* LaunchImage-700@2x.png in Resources */,
@@ -562,7 +591,9 @@
 				ED3F134F1CAD2F65000E36A5 /* Assets.xcassets in Resources */,
 				ED2C804D1CB522FE0052E1AD /* DJLoginAndRegisterView.xib in Resources */,
 				EDD13C0E1CB409A000C8EDA3 /* DJSubscribeCell.xib in Resources */,
+				EDDBEBC61CB5FC4400328651 /* DJMeController.storyboard in Resources */,
 				EDD13BFE1CB3EA3500C8EDA3 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +652,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0972291CB608E700FF5D19 /* DJMeSquareCell.m in Sources */,
 				EDBEF1C81CAD32A7009681AF /* DJTabBarController.m in Sources */,
 				EDBEF1D51CAD39D6009681AF /* DJEssenceController.m in Sources */,
 				EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */,
@@ -637,6 +669,7 @@
 				EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */,
 				EDD13C0D1CB409A000C8EDA3 /* DJSubscribeCell.m in Sources */,
 				ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */,
+				ED09722D1CB60F0100FF5D19 /* DJSquareItem.m in Sources */,
 				EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */,
 				ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */,
 				EDD13C091CB4067D00C8EDA3 /* DJSubRowItem.m in Sources */,
@@ -644,6 +677,7 @@
 				EDBEF1D21CAD3934009681AF /* DJPublishController.m in Sources */,
 				EDDBEBC41CB5F7A900328651 /* UITextField+PlaceholderColor.m in Sources */,
 				EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */,
+				ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */,
 				ED2C804B1CB522EA0052E1AD /* DJLoginAndRegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -51,7 +51,14 @@
     [self addOneChileRootViewController:[DJFriendTrendController class] title:@"关注" withItemImageNaem:@"tabBar_friendTrends_icon" selectItemImage:@"tabBar_friendTrends_click_icon"];
     
     //添加我页
-    [self addOneChileRootViewController:[DJMeController class] title:@"我" withItemImageNaem:@"tabBar_me_icon" selectItemImage:@"tabBar_me_click_icon"];
+ //   [self addOneChileRootViewController:[DJMeController class] title:@"我" withItemImageNaem:@"tabBar_me_icon" selectItemImage:@"tabBar_me_click_icon"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"DJMeController" bundle:nil];
+    UIViewController *meViewController = [storyboard instantiateInitialViewController];
+    meViewController.tabBarItem.title = @"我";
+    meViewController.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
+    meViewController.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
+    DJNavigationController *controller = [[DJNavigationController alloc] initWithRootViewController:meViewController];
+    [self addChildViewController:controller];
 }
 
 
@@ -66,7 +73,8 @@
 }
 
 + (void)setUpItemTitleColor {
-    UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedIn:[DJTabBar class], nil];
+//    UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedIn:[DJTabBar class], nil];
+    UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[[DJTabBar class]]];
     //选中情况下字体
     NSDictionary *attributesSelect = @{ NSForegroundColorAttributeName : [UIColor blackColor],
                                         NSFontAttributeName            : [UIFont systemFontOfSize:13]
