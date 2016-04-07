@@ -23,6 +23,7 @@
 @property (weak, nonatomic) UIImageView *imageView;
 @property (weak, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) DJADItem *item;
+@property (weak, nonatomic) NSURLSessionDataTask *dataTask;
 @end
 
 @implementation DJADController
@@ -51,7 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
     //设置启动后进行AD时的启动图片
     [self setUpLaunchImage];
     //下载广告数据
@@ -67,12 +68,14 @@
         [self.timer invalidate];
         UIApplication *application = [UIApplication sharedApplication];
         application.keyWindow.rootViewController = [[DJTabBarController alloc] init];
+        [_dataTask cancel];
     }
 }
 - (IBAction)jumpToTabBarController:(id)sender {
     [self.timer invalidate];
     UIApplication *application = [UIApplication sharedApplication];
     application.keyWindow.rootViewController = [[DJTabBarController alloc] init];
+    [_dataTask cancel];
 }
 
 #define Code2Value @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGULPxnz3vndtkQW08nau_I1Y1P1Rhmhwz5Hb8nBuL5HDknWRhTA_qmvqVQhGGUhI_py4MQhF1TvChmgKY5H6hmyPW5RFRHzuET1dGULnhuAN85HchUy7s5HDhIywGujY3P1n3mWb1PvDLnvF-Pyf4mHR4nyRvmWPBmhwBPjcLPyfsPHT3uWm4FMPLpHYkFh7sTA-b5yRzPj6sPvRdFhPdTWYsFMKzuykEmyfqnauGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiu9mLfqHbD_H70hTv6qnHn1PauVmynqnjclnj0lnj0lnj0lnj0lnj0hThYqniuVujYkFhkC5HRvnB3dFh7spyfqnW0srj64nBu9TjYsFMub5HDhTZFEujdzTLK_mgPCFMP85Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuBnHfdnjD4rjnvPWYkFh7sTZu-TWY1QW68nBuWUHYdnHchIAYqPHDzFhqsmyPGIZbqniuYThuYTjd1uAVxnz3vnzu9IjYzFh6qP1RsFMws5y-fpAq8uHT_nBuYmycqnau1IjYkPjRsnHb3n1mvnHDkQWD4niuVmybqniu1uy3qwD-HQDFKHakHHNn_HR7fQ7uDQ7PcHzkHiR3_RYqNQD7jfzkPiRn_wdKHQDP5HikPfRb_fNc_NbwPQDdRHzkDiNchTvwW5HnvPj0zQWndnHRvnBsdPWb4ri3kPW0kPHmhmLnqPH6LP1ndm1-WPyDvnHKBrAw9nju9PHIhmH9WmH6zrjRhTv7_5iu85HDhTvd15HDhTLTqP1RsFh4ETjYYPW0sPzuVuyYqn1mYnjc8nWbvrjTdQjRvrHb4QWDvnjDdPBuk5yRzPj6sPvRdgvPsTBu_my4bTvP9TARqnam"
@@ -82,9 +85,9 @@
     
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",nil];
     NSDictionary *parameter = @{@"code2" : Code2Value
-                                };
+                               };
     
-    [sessionManager GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
+     _dataTask = [sessionManager GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *ad = [responseObject[@"ad"] firstObject];
         DJADItem *item = [DJADItem mj_objectWithKeyValues:ad];
@@ -96,7 +99,10 @@
         CGFloat w = ScreenW;
         CGFloat h = ScreenW / item.w * item.h;
         self.imageView.frame = CGRectMake(0, 0, w, h);
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:item.w_picurl] ];
+        [self.imageView sd_setImageWithURL:[NSURL URLWithString:item.w_picurl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            //加载完后和广告一起显示倒计时
+            self.jumpButton.hidden = NO;
+        }];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);

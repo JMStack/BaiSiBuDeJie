@@ -7,6 +7,7 @@
 //
 
 #import "DJFriendTrendController.h"
+#import "DJLoginAndRegisterController.h"
 
 @interface DJFriendTrendController ()
 
@@ -33,6 +34,10 @@
 
 - (void)friendSRecomment:(UIButton *)button {
     debugMethod();
+}
+- (IBAction)loginOrRegister:(id)sender {
+    DJLoginAndRegisterController *viewController = [[DJLoginAndRegisterController alloc] init];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

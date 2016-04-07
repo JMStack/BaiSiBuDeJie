@@ -16,9 +16,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *subNumberText;
 @property (weak, nonatomic) IBOutlet UIButton *subscribeButton;
 
+@property (strong, nonatomic) UIImage *placeholder;
+
 @end
 
 @implementation DJSubscribeCell
+
+- (UIImage *)placeholder {
+    if (_placeholder == nil) {
+        UIImage *originImage = [UIImage imageNamed:@"defaultUserIcon"];
+        _placeholder = [originImage circleImage];
+    }
+    return _placeholder;
+}
 
 - (void)setItem:(DJSubRowItem *)item {
     _item = item;
@@ -32,9 +42,8 @@
         NSString *text = [NSString stringWithFormat:@"%zd人定阅",item.sub_number];
         self.subNumberText.text = text;
     }
-    UIImage *placeholder = [UIImage imageNamed:@"defaultUserIcon"];
     
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[placeholder circleImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:self.placeholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (image == nil) {
             return ;
         }
