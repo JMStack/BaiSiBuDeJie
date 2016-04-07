@@ -77,5 +77,4 @@ static NSString * const  cellID = @"SUBCELL";
     return 60.0f;
 }
 
-
 @end

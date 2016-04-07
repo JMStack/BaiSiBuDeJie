@@ -14,6 +14,7 @@
 		ED09722F1CB6357500FF5D19 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED09722E1CB6357500FF5D19 /* WebKit.framework */; };
 		ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0972341CB6364A00FF5D19 /* DJWebKitController.m */; };
 		ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */; };
+		ED09723D1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */; };
 		ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = ED142F351CAD4135006566DF /* UIColor+Hex.m */; };
 		ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */; };
 		ED1C19AC1CB4A81400483F73 /* DJFriendTrendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */; };
@@ -67,6 +68,8 @@
 		ED0972331CB6364A00FF5D19 /* DJWebKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJWebKitController.h; sourceTree = "<group>"; };
 		ED0972341CB6364A00FF5D19 /* DJWebKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJWebKitController.m; sourceTree = "<group>"; };
 		ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJWebKitController.xib; sourceTree = "<group>"; };
+		ED09723B1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DeleteFilePath.h"; sourceTree = "<group>"; };
+		ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DeleteFilePath.m"; sourceTree = "<group>"; };
 		ED142F341CAD4135006566DF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		ED142F351CAD4135006566DF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
@@ -395,6 +398,8 @@
 				EDBEF1CD1CAD36A3009681AF /* UIImage+Render.m */,
 				ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */,
 				ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */,
+				ED09723B1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.h */,
+				ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				ED2C80481CB51DA20052E1AD /* DJLoginButton.m in Sources */,
 				ED2C80441CB4E6530052E1AD /* DJLoginAndRegisterController.m in Sources */,
 				EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */,
+				ED09723D1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m in Sources */,
 				EDBEF1CB1CAD32F9009681AF /* DJNavigationController.m in Sources */,
 				EDBEF1C51CAD3159009681AF /* main.m in Sources */,
 				EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */,

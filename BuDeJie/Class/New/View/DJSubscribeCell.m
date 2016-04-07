@@ -49,7 +49,6 @@
         }
         self.iconImage.image = [image circleImage];
     }];
-    
 }
 
 
