@@ -8,6 +8,7 @@
 
 #import "DJNavigationController.h"
 
+
 @interface DJNavigationController () <UIGestureRecognizerDelegate>
 
 @end

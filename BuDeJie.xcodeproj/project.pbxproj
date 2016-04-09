@@ -14,9 +14,6 @@
 		ED09722F1CB6357500FF5D19 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED09722E1CB6357500FF5D19 /* WebKit.framework */; };
 		ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0972341CB6364A00FF5D19 /* DJWebKitController.m */; };
 		ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */; };
-		ED09723D1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */; };
-		ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = ED142F351CAD4135006566DF /* UIColor+Hex.m */; };
-		ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */; };
 		ED1C19AC1CB4A81400483F73 /* DJFriendTrendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */; };
 		ED2C80441CB4E6530052E1AD /* DJLoginAndRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C80421CB4E6530052E1AD /* DJLoginAndRegisterController.m */; };
 		ED2C80451CB4E6530052E1AD /* DJLoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2C80431CB4E6530052E1AD /* DJLoginAndRegisterController.xib */; };
@@ -28,7 +25,6 @@
 		EDBEF1C51CAD3159009681AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1BE1CAD3159009681AF /* main.m */; };
 		EDBEF1C81CAD32A7009681AF /* DJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1C71CAD32A7009681AF /* DJTabBarController.m */; };
 		EDBEF1CB1CAD32F9009681AF /* DJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1CA1CAD32F9009681AF /* DJNavigationController.m */; };
-		EDBEF1CE1CAD36A3009681AF /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1CD1CAD36A3009681AF /* UIImage+Render.m */; };
 		EDBEF1D21CAD3934009681AF /* DJPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1D11CAD3934009681AF /* DJPublishController.m */; };
 		EDBEF1D51CAD39D6009681AF /* DJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1D41CAD39D6009681AF /* DJEssenceController.m */; };
 		EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF1DD1CAD3AA5009681AF /* DJMeController.m */; };
@@ -48,8 +44,20 @@
 		EDD13C091CB4067D00C8EDA3 /* DJSubRowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C081CB4067D00C8EDA3 /* DJSubRowItem.m */; };
 		EDD13C0D1CB409A000C8EDA3 /* DJSubscribeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD13C0B1CB409A000C8EDA3 /* DJSubscribeCell.m */; };
 		EDD13C0E1CB409A000C8EDA3 /* DJSubscribeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */; };
+		EDD6EAF81CB92134006F2BE9 /* DJAllController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EAF71CB92134006F2BE9 /* DJAllController.m */; };
+		EDD6EAFB1CB9217F006F2BE9 /* DJVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EAFA1CB9217F006F2BE9 /* DJVideoController.m */; };
+		EDD6EAFE1CB9219A006F2BE9 /* DJSoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EAFD1CB9219A006F2BE9 /* DJSoundController.m */; };
+		EDD6EB011CB921BC006F2BE9 /* DJBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB001CB921BC006F2BE9 /* DJBaseController.m */; };
+		EDD6EB041CB92346006F2BE9 /* DJPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB031CB92346006F2BE9 /* DJPhotoController.m */; };
+		EDD6EB071CB9237C006F2BE9 /* DJTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB061CB9237C006F2BE9 /* DJTextController.m */; };
+		EDD6EB1C1CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB111CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m */; };
+		EDD6EB1D1CB945FD006F2BE9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB131CB945FD006F2BE9 /* UIColor+Hex.m */; };
+		EDD6EB1E1CB945FD006F2BE9 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB151CB945FD006F2BE9 /* UIImage+Circle.m */; };
+		EDD6EB1F1CB945FD006F2BE9 /* UIImage+Render.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB171CB945FD006F2BE9 /* UIImage+Render.m */; };
+		EDD6EB201CB945FD006F2BE9 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB191CB945FD006F2BE9 /* UITextField+PlaceholderColor.m */; };
+		EDD6EB211CB945FD006F2BE9 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB1B1CB945FD006F2BE9 /* UIView+Frame.m */; };
+		EDD6EB251CB94654006F2BE9 /* CommonConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6EB241CB94654006F2BE9 /* CommonConst.m */; };
 		EDDBEBC11CB5F17E00328651 /* DJLoginRegisterField.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBEBC01CB5F17E00328651 /* DJLoginRegisterField.m */; };
-		EDDBEBC41CB5F7A900328651 /* UITextField+PlaceholderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBEBC31CB5F7A900328651 /* UITextField+PlaceholderColor.m */; };
 		EDDBEBC61CB5FC4400328651 /* DJMeController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBEBC51CB5FC4400328651 /* DJMeController.storyboard */; };
 		EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCED81CAE1BD300490121 /* DJTabBar.m */; };
 		EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDECCEDB1CAE691100490121 /* DJSettingController.m */; };
@@ -68,12 +76,6 @@
 		ED0972331CB6364A00FF5D19 /* DJWebKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJWebKitController.h; sourceTree = "<group>"; };
 		ED0972341CB6364A00FF5D19 /* DJWebKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJWebKitController.m; sourceTree = "<group>"; };
 		ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJWebKitController.xib; sourceTree = "<group>"; };
-		ED09723B1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DeleteFilePath.h"; sourceTree = "<group>"; };
-		ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DeleteFilePath.m"; sourceTree = "<group>"; };
-		ED142F341CAD4135006566DF /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		ED142F351CAD4135006566DF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
-		ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
-		ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
 		ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJFriendTrendController.xib; sourceTree = "<group>"; };
 		ED2C80411CB4E6530052E1AD /* DJLoginAndRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJLoginAndRegisterController.h; sourceTree = "<group>"; };
 		ED2C80421CB4E6530052E1AD /* DJLoginAndRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJLoginAndRegisterController.m; sourceTree = "<group>"; };
@@ -93,8 +95,6 @@
 		EDBEF1C71CAD32A7009681AF /* DJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBarController.m; sourceTree = "<group>"; };
 		EDBEF1C91CAD32F9009681AF /* DJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJNavigationController.h; sourceTree = "<group>"; };
 		EDBEF1CA1CAD32F9009681AF /* DJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJNavigationController.m; sourceTree = "<group>"; };
-		EDBEF1CC1CAD36A3009681AF /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
-		EDBEF1CD1CAD36A3009681AF /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
 		EDBEF1CF1CAD3736009681AF /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		EDBEF1D01CAD3934009681AF /* DJPublishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJPublishController.h; sourceTree = "<group>"; };
 		EDBEF1D11CAD3934009681AF /* DJPublishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJPublishController.m; sourceTree = "<group>"; };
@@ -125,10 +125,34 @@
 		EDD13C0A1CB409A000C8EDA3 /* DJSubscribeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSubscribeCell.h; sourceTree = "<group>"; };
 		EDD13C0B1CB409A000C8EDA3 /* DJSubscribeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSubscribeCell.m; sourceTree = "<group>"; };
 		EDD13C0C1CB409A000C8EDA3 /* DJSubscribeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJSubscribeCell.xib; sourceTree = "<group>"; };
+		EDD6EAF61CB92134006F2BE9 /* DJAllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJAllController.h; sourceTree = "<group>"; };
+		EDD6EAF71CB92134006F2BE9 /* DJAllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJAllController.m; sourceTree = "<group>"; };
+		EDD6EAF91CB9217F006F2BE9 /* DJVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJVideoController.h; sourceTree = "<group>"; };
+		EDD6EAFA1CB9217F006F2BE9 /* DJVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJVideoController.m; sourceTree = "<group>"; };
+		EDD6EAFC1CB9219A006F2BE9 /* DJSoundController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSoundController.h; sourceTree = "<group>"; };
+		EDD6EAFD1CB9219A006F2BE9 /* DJSoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSoundController.m; sourceTree = "<group>"; };
+		EDD6EAFF1CB921BC006F2BE9 /* DJBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJBaseController.h; sourceTree = "<group>"; };
+		EDD6EB001CB921BC006F2BE9 /* DJBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJBaseController.m; sourceTree = "<group>"; };
+		EDD6EB021CB92346006F2BE9 /* DJPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJPhotoController.h; sourceTree = "<group>"; };
+		EDD6EB031CB92346006F2BE9 /* DJPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJPhotoController.m; sourceTree = "<group>"; };
+		EDD6EB051CB9237C006F2BE9 /* DJTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTextController.h; sourceTree = "<group>"; };
+		EDD6EB061CB9237C006F2BE9 /* DJTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTextController.m; sourceTree = "<group>"; };
+		EDD6EB101CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DeleteFilePath.h"; sourceTree = "<group>"; };
+		EDD6EB111CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DeleteFilePath.m"; sourceTree = "<group>"; };
+		EDD6EB121CB945FD006F2BE9 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		EDD6EB131CB945FD006F2BE9 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		EDD6EB141CB945FD006F2BE9 /* UIImage+Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
+		EDD6EB151CB945FD006F2BE9 /* UIImage+Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
+		EDD6EB161CB945FD006F2BE9 /* UIImage+Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Render.h"; sourceTree = "<group>"; };
+		EDD6EB171CB945FD006F2BE9 /* UIImage+Render.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Render.m"; sourceTree = "<group>"; };
+		EDD6EB181CB945FD006F2BE9 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
+		EDD6EB191CB945FD006F2BE9 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
+		EDD6EB1A1CB945FD006F2BE9 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		EDD6EB1B1CB945FD006F2BE9 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		EDD6EB231CB94654006F2BE9 /* CommonConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
+		EDD6EB241CB94654006F2BE9 /* CommonConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonConst.m; sourceTree = "<group>"; };
 		EDDBEBBF1CB5F17E00328651 /* DJLoginRegisterField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJLoginRegisterField.h; sourceTree = "<group>"; };
 		EDDBEBC01CB5F17E00328651 /* DJLoginRegisterField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJLoginRegisterField.m; sourceTree = "<group>"; };
-		EDDBEBC21CB5F7A900328651 /* UITextField+PlaceholderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderColor.h"; sourceTree = "<group>"; };
-		EDDBEBC31CB5F7A900328651 /* UITextField+PlaceholderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderColor.m"; sourceTree = "<group>"; };
 		EDDBEBC51CB5FC4400328651 /* DJMeController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DJMeController.storyboard; sourceTree = "<group>"; };
 		EDECCED71CAE1BD300490121 /* DJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTabBar.h; sourceTree = "<group>"; };
 		EDECCED81CAE1BD300490121 /* DJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTabBar.m; sourceTree = "<group>"; };
@@ -231,6 +255,7 @@
 		EDBEF1AA1CAD3159009681AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EDD6EAF21CB920D9006F2BE9 /* ChildViewController */,
 				EDBEF1D31CAD39D6009681AF /* DJEssenceController.h */,
 				EDBEF1D41CAD39D6009681AF /* DJEssenceController.m */,
 			);
@@ -385,21 +410,13 @@
 		EDBEF1BA1CAD3159009681AF /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				ED142F341CAD4135006566DF /* UIColor+Hex.h */,
-				ED142F351CAD4135006566DF /* UIColor+Hex.m */,
+				EDD6EB221CB94632006F2BE9 /* CommonConst */,
+				EDD6EB0F1CB945FD006F2BE9 /* Category */,
 				EDBEF1BB1CAD3159009681AF /* AppDelegate.h */,
-				EDDBEBC21CB5F7A900328651 /* UITextField+PlaceholderColor.h */,
-				EDDBEBC31CB5F7A900328651 /* UITextField+PlaceholderColor.m */,
 				EDBEF1BC1CAD3159009681AF /* AppDelegate.m */,
 				EDBEF1CF1CAD3736009681AF /* BuDeJie.pch */,
 				EDBEF1BD1CAD3159009681AF /* Info.plist */,
 				EDBEF1BE1CAD3159009681AF /* main.m */,
-				EDBEF1CC1CAD36A3009681AF /* UIImage+Render.h */,
-				EDBEF1CD1CAD36A3009681AF /* UIImage+Render.m */,
-				ED1C19A81CB41FA000483F73 /* UIImage+Circle.h */,
-				ED1C19A91CB41FA000483F73 /* UIImage+Circle.m */,
-				ED09723B1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.h */,
-				ED09723C1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -520,6 +537,53 @@
 			);
 			name = "启动图片";
 			path = "../../../百思不得姐资源/启动图片";
+			sourceTree = "<group>";
+		};
+		EDD6EAF21CB920D9006F2BE9 /* ChildViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6EAF61CB92134006F2BE9 /* DJAllController.h */,
+				EDD6EAF71CB92134006F2BE9 /* DJAllController.m */,
+				EDD6EB021CB92346006F2BE9 /* DJPhotoController.h */,
+				EDD6EB031CB92346006F2BE9 /* DJPhotoController.m */,
+				EDD6EAF91CB9217F006F2BE9 /* DJVideoController.h */,
+				EDD6EAFA1CB9217F006F2BE9 /* DJVideoController.m */,
+				EDD6EAFC1CB9219A006F2BE9 /* DJSoundController.h */,
+				EDD6EAFD1CB9219A006F2BE9 /* DJSoundController.m */,
+				EDD6EAFF1CB921BC006F2BE9 /* DJBaseController.h */,
+				EDD6EB001CB921BC006F2BE9 /* DJBaseController.m */,
+				EDD6EB051CB9237C006F2BE9 /* DJTextController.h */,
+				EDD6EB061CB9237C006F2BE9 /* DJTextController.m */,
+			);
+			path = ChildViewController;
+			sourceTree = "<group>";
+		};
+		EDD6EB0F1CB945FD006F2BE9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6EB101CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.h */,
+				EDD6EB111CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m */,
+				EDD6EB121CB945FD006F2BE9 /* UIColor+Hex.h */,
+				EDD6EB131CB945FD006F2BE9 /* UIColor+Hex.m */,
+				EDD6EB141CB945FD006F2BE9 /* UIImage+Circle.h */,
+				EDD6EB151CB945FD006F2BE9 /* UIImage+Circle.m */,
+				EDD6EB161CB945FD006F2BE9 /* UIImage+Render.h */,
+				EDD6EB171CB945FD006F2BE9 /* UIImage+Render.m */,
+				EDD6EB181CB945FD006F2BE9 /* UITextField+PlaceholderColor.h */,
+				EDD6EB191CB945FD006F2BE9 /* UITextField+PlaceholderColor.m */,
+				EDD6EB1A1CB945FD006F2BE9 /* UIView+Frame.h */,
+				EDD6EB1B1CB945FD006F2BE9 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EDD6EB221CB94632006F2BE9 /* CommonConst */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6EB231CB94654006F2BE9 /* CommonConst.h */,
+				EDD6EB241CB94654006F2BE9 /* CommonConst.m */,
+			);
+			path = CommonConst;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,30 +722,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0972291CB608E700FF5D19 /* DJMeSquareCell.m in Sources */,
+				EDD6EB201CB945FD006F2BE9 /* UITextField+PlaceholderColor.m in Sources */,
 				EDBEF1C81CAD32A7009681AF /* DJTabBarController.m in Sources */,
+				EDD6EB211CB945FD006F2BE9 /* UIView+Frame.m in Sources */,
 				EDBEF1D51CAD39D6009681AF /* DJEssenceController.m in Sources */,
+				EDD6EAFB1CB9217F006F2BE9 /* DJVideoController.m in Sources */,
 				EDECCEDC1CAE691100490121 /* DJSettingController.m in Sources */,
+				EDD6EB071CB9237C006F2BE9 /* DJTextController.m in Sources */,
 				EDBEF1C31CAD3159009681AF /* AppDelegate.m in Sources */,
 				EDD13BF01CB3E33600C8EDA3 /* DJADController.m in Sources */,
-				EDBEF1CE1CAD36A3009681AF /* UIImage+Render.m in Sources */,
 				EDD13C061CB4008D00C8EDA3 /* DJSubscribeController.m in Sources */,
+				EDD6EB1E1CB945FD006F2BE9 /* UIImage+Circle.m in Sources */,
+				EDD6EAFE1CB9219A006F2BE9 /* DJSoundController.m in Sources */,
 				EDD13C031CB3F0E900C8EDA3 /* DJADItem.m in Sources */,
+				EDD6EB1D1CB945FD006F2BE9 /* UIColor+Hex.m in Sources */,
 				ED2C80481CB51DA20052E1AD /* DJLoginButton.m in Sources */,
+				EDD6EB1C1CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m in Sources */,
 				ED2C80441CB4E6530052E1AD /* DJLoginAndRegisterController.m in Sources */,
 				EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */,
-				ED09723D1CB6472C00FF5D19 /* NSFileManager+DeleteFilePath.m in Sources */,
 				EDBEF1CB1CAD32F9009681AF /* DJNavigationController.m in Sources */,
 				EDBEF1C51CAD3159009681AF /* main.m in Sources */,
+				EDD6EB1F1CB945FD006F2BE9 /* UIImage+Render.m in Sources */,
+				EDD6EAF81CB92134006F2BE9 /* DJAllController.m in Sources */,
 				EDBEF1E41CAD3D13009681AF /* DJFriendTrendController.m in Sources */,
 				EDD13C0D1CB409A000C8EDA3 /* DJSubscribeCell.m in Sources */,
-				ED142F361CAD4135006566DF /* UIColor+Hex.m in Sources */,
 				ED09722D1CB60F0100FF5D19 /* DJSquareItem.m in Sources */,
 				EDBEF1DE1CAD3AA5009681AF /* DJMeController.m in Sources */,
-				ED1C19AA1CB41FA000483F73 /* UIImage+Circle.m in Sources */,
 				EDD13C091CB4067D00C8EDA3 /* DJSubRowItem.m in Sources */,
+				EDD6EB251CB94654006F2BE9 /* CommonConst.m in Sources */,
 				EDDBEBC11CB5F17E00328651 /* DJLoginRegisterField.m in Sources */,
 				EDBEF1D21CAD3934009681AF /* DJPublishController.m in Sources */,
-				EDDBEBC41CB5F7A900328651 /* UITextField+PlaceholderColor.m in Sources */,
+				EDD6EB011CB921BC006F2BE9 /* DJBaseController.m in Sources */,
+				EDD6EB041CB92346006F2BE9 /* DJPhotoController.m in Sources */,
 				EDECCED91CAE1BD300490121 /* DJTabBar.m in Sources */,
 				ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */,
 				ED2C804B1CB522EA0052E1AD /* DJLoginAndRegisterView.m in Sources */,

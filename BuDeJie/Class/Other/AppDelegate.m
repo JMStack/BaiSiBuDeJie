@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DJADController.h"
+#import "DJTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    DJADController *rootViewController = [[DJADController alloc] init];
+//    DJADController *rootViewController = [[DJADController alloc] init];
+    DJTabBarController *rootViewController = [[DJTabBarController alloc] init];
     
     self.window.rootViewController = rootViewController;
     

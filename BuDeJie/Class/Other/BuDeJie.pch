@@ -22,6 +22,8 @@
 #import "UIImage+Circle.h"
 #import "UITextField+PlaceholderColor.h"
 #import "NSFileManager+DeleteFilePath.h"
+#import "UIView+Frame.h"
+#import "CommonConst/CommonConst.h"
 
 //#define iPhone6P (ScreenH == 736)
 //#define iPhone6 (ScreenH == 667)
@@ -35,5 +37,11 @@
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
+
+
+#define TABBARHEHGHT 49
+#define NAVIBARHEGHT 64
+
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 
 #endif /* BuDeJie_pch */

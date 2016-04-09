@@ -38,6 +38,11 @@
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
     NSLog(@"%@",NSStringFromCGRect(self.loginAndRegisterView.frame));
     DJLoginAndRegisterView *loginView = [self.loginAndRegisterView.subviews firstObject];
     loginView.frame = CGRectMake(0, 0, self.loginAndRegisterView.frame.size.width * 0.5, self.loginAndRegisterView.frame.size.height);
