@@ -58,6 +58,7 @@
         self.footerView.frame = rect;
         self.tableView.tableFooterView = self.footerView;
         [self.footerView reloadData];
+        [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);

@@ -19,40 +19,19 @@
 @property (weak, nonatomic) UIButton *previousSeletedButton;
 @property (weak, nonatomic) UIView *indicatorView;
 @property (weak, nonatomic) UIScrollView *scrollView;
+@property (weak, nonatomic) UIScrollView *headTitleView;
 @property (assign, nonatomic) NSUInteger subPageCount;
-// Child VC
-@property (strong, nonatomic) DJAllController *allVC;
-@property (strong, nonatomic) DJPhotoController *photoVC;
-@property (strong, nonatomic) DJVideoController *videoVC;
-@property (strong, nonatomic) DJSoundController *soundVC;
-@property (strong, nonatomic) DJTextController *textVC;
 
-@property (strong, nonatomic) NSMutableArray <UITableViewController *>   *childVCArray;
 @end
 
 @implementation DJEssenceController
-
-#pragma ViewController Lazy Load
-- (NSMutableArray *)childVCArray {
-    if (_childVCArray == nil) {
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:_subPageCount];
-        DJAllController *allVC = [[DJAllController alloc] init];
-        [array addObject:allVC];
-        _childVCArray = array;
-    } else if (_childVCArray.count < _subPageCount) {
-        NSArray <Class> *objectType = @[[DJPhotoController class],[DJVideoController class],[DJSoundController class],[DJTextController class]];
-        UITableViewController *viewController = [[objectType[_childVCArray.count - 1] alloc] init];
-        [_childVCArray addObject:viewController];
-    }
-    
-    return _childVCArray;
-}
 
 #pragma mark -- Controller View Life Circle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self loadAllViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -64,12 +43,20 @@
     [self setUpHeadTitleView];
     [self addMainScrollView];
     //Init The First View
-    [self scrollViewDidScroll:_scrollView];
+    [self loadViewControllerViewAtIndex:0 addInView:_scrollView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadAllViewController {
+    
+    NSArray <Class> *objectType = @[[DJAllController class],[DJPhotoController class],[DJVideoController class],[DJSoundController class],[DJTextController class]];
+    for ( Class class in objectType) {
+        [self addChildViewController:[[class alloc] init]];
+    }
 }
 
 #pragma mark -- Head Title View 
@@ -81,7 +68,9 @@
     CGRect rect = CGRectMake(0, y, self.view.width, kHeadHegiht);
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:rect];
     scrollView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
+    scrollView.scrollsToTop = NO;
     [self.view addSubview:scrollView];
+    _headTitleView = scrollView;
     // Add Sub Button
     [self addAllOfTheButtonInView:scrollView];
     // ADD Red Indicator View
@@ -125,7 +114,6 @@
         CGFloat x = width * index++;
         button.frame = CGRectMake(x, 0, width, view.height);
     }
-    
 }
 
 - (void)titleButtonTapped:(UIButton *)button {
@@ -136,7 +124,21 @@
     point.x = button.center.x;
     [UIView animateWithDuration:0.3 animations:^{
         _indicatorView.center = point;
+    } completion:^(BOOL finished) {
+        [self loadViewControllerViewAtIndex:button.tag addInView:_scrollView];
     }];
+    CGFloat x = button.tag * _scrollView.width;
+    [_scrollView setContentOffset:CGPointMake(x, _scrollView.contentOffset.y) animated:YES];
+    
+    // 对已添加的tableview,让其始终只有一个可以点击状态栏回到顶部
+    UITableViewController *preVC = self.childViewControllers[_previousSeletedButton.tag];
+    if ([preVC isViewLoaded]) {
+        preVC.tableView.scrollsToTop = NO;
+    }
+    UITableViewController *currentVC = self.childViewControllers[button.tag];
+    if ([currentVC isViewLoaded]) {
+        currentVC.tableView.scrollsToTop = YES;
+    }
     
     _previousSeletedButton = button;
 }
@@ -148,22 +150,32 @@
     scrollView.pagingEnabled = YES;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.scrollsToTop = NO;
     scrollView.delegate = self;
     [self.view insertSubview:scrollView atIndex:0];
     scrollView.backgroundColor = [UIColor lightGrayColor];
     _scrollView = scrollView;
 }
-#pragma mark -- UIScrollView Delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSInteger index = scrollView.contentOffset.x / scrollView.width;
-    if (index < 0 || index >= _subPageCount) return;
-    UIView *childView = self.childVCArray[index].view;
+
+- (void)loadViewControllerViewAtIndex:(NSInteger)index addInView:(UIScrollView *)scrollView {
+    UIViewController *viewController = self.childViewControllers[index];
+    UITableView *childView = (UITableView *)viewController.view;
     if (childView.superview != nil) return;
+    // 新添加的tableview肯定是当前可视的,必需让其可以点击状态栏回到顶部
+    childView.scrollsToTop = YES;
     CGRect rect = CGRectMake(scrollView.width * index, 0, scrollView.width, scrollView.height);
     childView.frame = rect;
-    [_scrollView addSubview:childView];
+    [scrollView addSubview:childView];
 }
-                                          
+
+#pragma mark -- UIScrollView Delegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSUInteger index = scrollView.contentOffset.x / scrollView.width;
+    UIButton *button = _headTitleView.subviews[index];
+    [self titleButtonTapped:button];
+}
+
+
 #pragma mark -- Navigation Bar Style
 
 - (void)setUpNavigationBarStyle {

@@ -23,8 +23,8 @@ static NSString * const cellID = @"CellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.delegate = self;
-    
-    self.view.backgroundColor = RandomColor;
+    self.tableView.scrollsToTop = NO;
+//    self.view.backgroundColor = RandomColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,18 +33,19 @@ static NSString * const cellID = @"CellID";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     return 20;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPat {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    cell.backgroundColor = self.view.backgroundColor;
+    cell.backgroundColor = RandomColor;
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd",indexPath.row];
     return cell;
 }
 #pragma mark - Table view data source
