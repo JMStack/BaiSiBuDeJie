@@ -10,3 +10,8 @@
 extern CGFloat const kHeadHegiht;
 extern CGFloat const kNavigationBarHeight;
 extern CGFloat const kTabBarHegiht;
+extern CGFloat const margin;
+extern NSString * const BaseURL;
+
+extern NSString * const TitleButtonNocification;
+extern NSString * const TabBarNotification;

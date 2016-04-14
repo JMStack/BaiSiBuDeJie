@@ -20,7 +20,7 @@
     
     self.imageView.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5 - rect.size.height);
     
-    self.titleLabel.center = CGPointMake(self.frame.size.width * 0.5, CGRectGetMaxY(self.imageView.frame) + rect.size.height * 0.5 + 8);
+    self.titleLabel.center = CGPointMake(self.frame.size.width * 0.5, CGRectGetMaxY(self.imageView.frame) + rect.size.height * 0.5 + margin);
 }
 
 @end

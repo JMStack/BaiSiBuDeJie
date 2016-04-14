@@ -14,6 +14,9 @@
 		ED09722F1CB6357500FF5D19 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED09722E1CB6357500FF5D19 /* WebKit.framework */; };
 		ED0972361CB6364A00FF5D19 /* DJWebKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0972341CB6364A00FF5D19 /* DJWebKitController.m */; };
 		ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */; };
+		ED0A79241CBF7D56009507C1 /* DJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0A79231CBF7D56009507C1 /* DJTopic.m */; };
+		ED0A792B1CBF94AA009507C1 /* DJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0A79291CBF94AA009507C1 /* DJTopicCell.m */; };
+		ED0A792C1CBF94AA009507C1 /* DJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0A792A1CBF94AA009507C1 /* DJTopicCell.xib */; };
 		ED1C19AC1CB4A81400483F73 /* DJFriendTrendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */; };
 		ED2C80441CB4E6530052E1AD /* DJLoginAndRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2C80421CB4E6530052E1AD /* DJLoginAndRegisterController.m */; };
 		ED2C80451CB4E6530052E1AD /* DJLoginAndRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2C80431CB4E6530052E1AD /* DJLoginAndRegisterController.xib */; };
@@ -76,6 +79,11 @@
 		ED0972331CB6364A00FF5D19 /* DJWebKitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJWebKitController.h; sourceTree = "<group>"; };
 		ED0972341CB6364A00FF5D19 /* DJWebKitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJWebKitController.m; sourceTree = "<group>"; };
 		ED0972351CB6364A00FF5D19 /* DJWebKitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJWebKitController.xib; sourceTree = "<group>"; };
+		ED0A79221CBF7D56009507C1 /* DJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTopic.h; sourceTree = "<group>"; };
+		ED0A79231CBF7D56009507C1 /* DJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTopic.m; sourceTree = "<group>"; };
+		ED0A79281CBF94AA009507C1 /* DJTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJTopicCell.h; sourceTree = "<group>"; };
+		ED0A79291CBF94AA009507C1 /* DJTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJTopicCell.m; sourceTree = "<group>"; };
+		ED0A792A1CBF94AA009507C1 /* DJTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJTopicCell.xib; sourceTree = "<group>"; };
 		ED1C19AB1CB4A81400483F73 /* DJFriendTrendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJFriendTrendController.xib; sourceTree = "<group>"; };
 		ED2C80411CB4E6530052E1AD /* DJLoginAndRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJLoginAndRegisterController.h; sourceTree = "<group>"; };
 		ED2C80421CB4E6530052E1AD /* DJLoginAndRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJLoginAndRegisterController.m; sourceTree = "<group>"; };
@@ -265,6 +273,8 @@
 		EDBEF1AB1CAD3159009681AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ED0A79221CBF7D56009507C1 /* DJTopic.h */,
+				ED0A79231CBF7D56009507C1 /* DJTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +282,9 @@
 		EDBEF1AC1CAD3159009681AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED0A79281CBF94AA009507C1 /* DJTopicCell.h */,
+				ED0A79291CBF94AA009507C1 /* DJTopicCell.m */,
+				ED0A792A1CBF94AA009507C1 /* DJTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,6 +676,7 @@
 				EDDBEBC61CB5FC4400328651 /* DJMeController.storyboard in Resources */,
 				EDD13BFE1CB3EA3500C8EDA3 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				ED0972371CB6364A00FF5D19 /* DJWebKitController.xib in Resources */,
+				ED0A792C1CBF94AA009507C1 /* DJTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,11 +748,13 @@
 				EDD13C061CB4008D00C8EDA3 /* DJSubscribeController.m in Sources */,
 				EDD6EB1E1CB945FD006F2BE9 /* UIImage+Circle.m in Sources */,
 				EDD6EAFE1CB9219A006F2BE9 /* DJSoundController.m in Sources */,
+				ED0A79241CBF7D56009507C1 /* DJTopic.m in Sources */,
 				EDD13C031CB3F0E900C8EDA3 /* DJADItem.m in Sources */,
 				EDD6EB1D1CB945FD006F2BE9 /* UIColor+Hex.m in Sources */,
 				ED2C80481CB51DA20052E1AD /* DJLoginButton.m in Sources */,
 				EDD6EB1C1CB945FD006F2BE9 /* NSFileManager+DeleteFilePath.m in Sources */,
 				ED2C80441CB4E6530052E1AD /* DJLoginAndRegisterController.m in Sources */,
+				ED0A792B1CBF94AA009507C1 /* DJTopicCell.m in Sources */,
 				EDBEF1E11CAD3AE5009681AF /* DJNewController.m in Sources */,
 				EDBEF1CB1CAD32F9009681AF /* DJNavigationController.m in Sources */,
 				EDBEF1C51CAD3159009681AF /* main.m in Sources */,

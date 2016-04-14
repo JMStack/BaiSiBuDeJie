@@ -24,7 +24,8 @@ static NSString * const cellID = @"CellID";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView.delegate = self;
     self.tableView.scrollsToTop = NO;
-//    self.view.backgroundColor = RandomColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#dfdfdf"];
 }
 
 - (void)didReceiveMemoryWarning {

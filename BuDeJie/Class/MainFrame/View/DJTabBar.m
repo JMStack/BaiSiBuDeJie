@@ -11,6 +11,7 @@
 @interface DJTabBar ()
 
 @property (weak, nonatomic) UIButton *publisButton;
+@property (weak, nonatomic) UIControl *previousTabarButton;
 
 @end
 
@@ -42,18 +43,31 @@
     CGFloat W = self.frame.size.width / count;
     CGFloat H = self.frame.size.height;
     NSInteger index = 0;
-    for (UIView *tabBarButton in self.subviews) {
+    for (UIControl *tabBarButton in self.subviews) {
         if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            if (index == 0 && self.previousTabarButton == nil) {
+                self.previousTabarButton = tabBarButton;
+            }
+            
             if (index == 2) {
                 index += 1;
             }
             x = W * index++;
             tabBarButton.frame = CGRectMake(x, y, W, H);
+            
+            [tabBarButton addTarget:self action:@selector(tabBarButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
     
     [self.publisButton sizeToFit];
     self.publisButton.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
+}
+
+- (void)tabBarButtonClick:(UIControl *)tabBarButton {
+    if (self.previousTabarButton == tabBarButton) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:TabBarNotification object:nil];
+    }
+    self.previousTabarButton = tabBarButton;
 }
 
 

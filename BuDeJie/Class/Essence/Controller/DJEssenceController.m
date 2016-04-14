@@ -69,6 +69,8 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:rect];
     scrollView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
     scrollView.scrollsToTop = NO;
+    scrollView.showsVerticalScrollIndicator = NO;
+    scrollView.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:scrollView];
     _headTitleView = scrollView;
     // Add Sub Button
@@ -117,8 +119,11 @@
 }
 
 - (void)titleButtonTapped:(UIButton *)button {
+    if (_previousSeletedButton == button ) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:TitleButtonNocification object:nil];
+        return;
+    }
     _previousSeletedButton.selected = !_previousSeletedButton;
-    
     button.selected = !button.selected;
     CGPoint point = _indicatorView.center;
     point.x = button.center.x;
@@ -172,6 +177,7 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     NSUInteger index = scrollView.contentOffset.x / scrollView.width;
     UIButton *button = _headTitleView.subviews[index];
+    if (_previousSeletedButton == button) return;
     [self titleButtonTapped:button];
 }
 
